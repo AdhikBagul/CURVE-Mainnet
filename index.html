@@ -4610,6 +4610,379 @@
                 font-weight: 800;
             }
         </style>
+        <style>
+
+            /* The Modal (background) */
+            .modal {
+              display: none; /* Hidden by default */
+              position: fixed; /* Stay in place */
+              z-index: 1; /* Sit on top */
+              padding-top: 100px; /* Location of the box */
+              left: 0;
+              top: 0;
+              width: 100%; /* Full width */
+              height: 100%; /* Full height */
+              overflow: auto; /* Enable scroll if needed */
+              background-color: rgb(0,0,0); /* Fallback color */
+              background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            }
+            
+            /* Modal Content */
+            /* .modal-content {
+              position: relative;
+              background-color: #fefefe;
+              margin: auto;
+              padding: 0;
+              border: 1px solid #888;
+              width: 80%;
+              box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+              -webkit-animation-name: animatetop;
+              -webkit-animation-duration: 0.4s;
+              animation-name: animatetop;
+              animation-duration: 0.4s
+            } */
+            
+            /* Add Animation */
+            @-webkit-keyframes animatetop {
+              from {top:-300px; opacity:0} 
+              to {top:0; opacity:1}
+            }
+            
+            @keyframes animatetop {
+              from {top:-300px; opacity:0}
+              to {top:0; opacity:1}
+            }
+            
+            /* The Close Button */
+            .close {
+              color: white;
+              float: right;
+              font-size: 28px;
+              font-weight: bold;
+            }
+            
+            .close:hover,
+            .close:focus {
+              color: #000;
+              text-decoration: none;
+              cursor: pointer;
+            }
+            
+            .modal-header {
+              padding: 2px 16px;
+              background-color: #5cb85c;
+              color: white;
+            }
+            
+            .modal-body {padding: 2px 16px;}
+            
+            .modal-footer {
+              padding: 2px 16px;
+              background-color: #5cb85c;
+              color: white;
+            }
+
+
+            .css-ikr2h6 {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                width: 100vw;
+                height: 100vh;
+                position: fixed;
+                left: 0px;
+                top: 0px;
+                z-index: var(--chakra-zIndices-modal);
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                overflow: hidden;
+            }
+
+            .css-1ptplj6 {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                position: relative;
+                width: 100%;
+                outline: 2px solid transparent;
+                outline-offset: 2px;
+                border-radius: 1rem;
+                background: var(--chakra-colors-white);
+                color: inherit;
+                margin-top: 3.75rem;
+                margin-bottom: 3.75rem;
+                z-index: var(--chakra-zIndices-modal);
+                max-height: calc(100% - 7.5rem);
+                box-shadow: 0px 1rem 2rem #617492;
+                max-width: 37rem;
+                padding-bottom: var(--chakra-space-4);
+                padding-top: var(--chakra-space-2);
+                -webkit-margin-start: var(--chakra-space-12);
+                margin-inline-start: var(--chakra-space-12);
+                -webkit-margin-end: var(--chakra-space-12);
+                margin-inline-end: var(--chakra-space-12);
+            }
+            .css-45mb3m {
+                -webkit-flex: 0;
+                -ms-flex: 0;
+                flex: 0;
+                -webkit-padding-start: var(--chakra-space-6);
+                padding-inline-start: var(--chakra-space-6);
+                -webkit-padding-end: var(--chakra-space-6);
+                padding-inline-end: var(--chakra-space-6);
+                padding-top: var(--chakra-space-4);
+                padding-bottom: 0px;
+                font-size: var(--chakra-fontSizes-xl);
+                font-weight: var(--chakra-fontWeights-semibold);
+            }
+            .css-1lekzkb {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: justify;
+                -webkit-justify-content: space-between;
+                justify-content: space-between;
+            }
+            .css-f06vj6 {
+                color: var(--chakra-colors-grey);
+                margin-top: var(--chakra-space-2);
+                margin-bottom: var(--chakra-space-2);
+                font-size: var(--chakra-fontSizes-md);
+                font-weight: var(--chakra-fontWeights-normal);
+            }
+            .css-14nk9hv {
+                width: 100%;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                position: relative;
+                margin-bottom: var(--chakra-space-4);
+                border-color: #DAE3F0;
+            }
+            .css-1qcc3u7 {
+                width: 100%;
+                min-width: 0px;
+                outline: 2px solid transparent;
+                outline-offset: 2px;
+                position: relative;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                -ms-appearance: none;
+                appearance: none;
+                transition-property: var(--chakra-transition-property-common);
+                transition-duration: var(--chakra-transition-duration-normal);
+                font-size: var(--chakra-fontSizes-md);
+                -webkit-padding-start: var(--chakra-space-4);
+                padding-inline-start: var(--chakra-space-4);
+                -webkit-padding-end: var(--chakra-space-10);
+                padding-inline-end: var(--chakra-space-10);
+                height: var(--chakra-sizes-10);
+                border-radius: var(--chakra-radii-md);
+                border: 1px solid;
+                border-color: inherit;
+                background: inherit;
+            }
+            .css-19x6j0w {
+                right: 0;
+                width: var(--chakra-sizes-10);
+                height: var(--chakra-sizes-10);
+                font-size: var(--chakra-fontSizes-md);
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                position: absolute;
+                top: 0px;
+                z-index: 2;
+                -webkit-padding-start: 0px;
+                padding-inline-start: 0px;
+                -webkit-padding-end: 0px;
+                padding-inline-end: 0px;
+            }
+            .css-yl8lox {
+                -webkit-padding-start: var(--chakra-space-6);
+                padding-inline-start: var(--chakra-space-6);
+                -webkit-padding-end: var(--chakra-space-6);
+                padding-inline-end: var(--chakra-space-6);
+                padding-top: var(--chakra-space-2);
+                padding-bottom: var(--chakra-space-2);
+                -webkit-flex: 1;
+                -ms-flex: 1;
+                flex: 1;
+                overflow: auto;
+                min-height: 5rem;
+            }
+            .css-19owwni {
+                display: -webkit-inline-box;
+                display: -webkit-inline-flex;
+                display: -ms-inline-flexbox;
+                display: inline-flex;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                -ms-appearance: none;
+                appearance: none;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                position: relative;
+                white-space: nowrap;
+                vertical-align: middle;
+                outline: 2px solid transparent;
+                outline-offset: 2px;
+                width: 100%;
+                line-height: 1.2;
+                border-radius: var(--chakra-radii-md);
+                font-weight: var(--chakra-fontWeights-semibold);
+                transition-property: var(--chakra-transition-property-common);
+                transition-duration: var(--chakra-transition-duration-normal);
+                height: var(--chakra-sizes-12);
+                min-width: var(--chakra-sizes-12);
+                font-size: var(--chakra-fontSizes-lg);
+                -webkit-padding-start: var(--chakra-space-4);
+                padding-inline-start: var(--chakra-space-4);
+                -webkit-padding-end: var(--chakra-space-4);
+                padding-inline-end: var(--chakra-space-4);
+                border: 1px solid;
+                border-color: #DAE3F0;
+                color: inherit;
+                margin-bottom: var(--chakra-space-2);
+            }
+            .css-1bntj9o {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: justify;
+                -webkit-justify-content: space-between;
+                justify-content: space-between;
+                width: 100%;
+            }
+            .css-70qvj9 {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+            }
+            .css-1yehhod {
+                color: var(--chakra-colors-grey);
+                font-weight: var(--chakra-fontWeights-normal);
+                text-overflow: ellipsis;
+                overflow: hidden;
+                max-width: 60%;
+            }
+            .css-lvdg4k {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                background: var(--chakra-colors-white);
+                border: 1px solid #DAE3F0;
+                width: var(--chakra-sizes-8);
+                height: var(--chakra-sizes-8);
+                overflow: hidden;
+                border-radius: 50%;
+            }
+            .css-75cnih {
+                font-size: var(--chakra-fontSizes-lg);
+                font-weight: var(--chakra-fontWeights-bold);
+                -webkit-margin-start: var(--chakra-space-2);
+                margin-inline-start: var(--chakra-space-2);
+                -webkit-margin-end: var(--chakra-space-2);
+                margin-inline-end: var(--chakra-space-2);
+            }
+            .css-111mb8s {
+                outline: 2px solid transparent;
+                outline-offset: 2px;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                -webkit-flex-shrink: 0;
+                -ms-flex-negative: 0;
+                flex-shrink: 0;
+                width: var(--close-button-size);
+                height: var(--close-button-size);
+                border-radius: var(--chakra-radii-md);
+                transition-property: var(--chakra-transition-property-common);
+                transition-duration: var(--chakra-transition-duration-normal);
+                --close-button-size: 40px;
+                font-size: 16px;
+                position: absolute;
+                top: calc(var(--chakra-space-10) * -1);
+                right: calc(var(--chakra-space-10) * -1);
+                color: var(--chakra-colors-white);
+                padding: var(--chakra-space-2);
+            }
+            .css-onkibi {
+                width: 1em;
+                height: 1em;
+                display: inline-block;
+                line-height: 1em;
+                -webkit-flex-shrink: 0;
+                -ms-flex-negative: 0;
+                flex-shrink: 0;
+                color: currentColor;
+                vertical-align: middle;
+            }
+        </style>
     </head>
     <body class="chakra-ui-light" data-new-gr-c-s-check-loaded="14.1107.0" data-gr-ext-installed="">
         <style>
@@ -4759,7 +5132,7 @@
                                     </svg>
                                     <div class="css-1n7dt1c">
                                         <div class="css-2rtmfi">
-                                            <div class="css-yuurid">
+                                            <div class="css-yuurid" id="myBtn">
                                                 <div class="css-lvdg4k">
                                                     <img src="static/img/favicon-32x32.png" class="chakra-image css-2lzsxm">
                                                 </div>
@@ -5022,6 +5395,57 @@
                 </div>
             </div>
         </div>
+
+
+        <!-- modal popup -->
+        <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                <!-- <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Modal Header</h2>
+                </div> -->
+                <div class="modal-body">
+                    <div class="chakra-modal__content-container css-ikr2h6" tabindex="-1"><section class="chakra-modal__content css-1ptplj6" role="dialog" id="chakra-modal-89" tabindex="-1" aria-modal="true" aria-labelledby="chakra-modal--header-89" aria-describedby="chakra-modal--body-89" style="opacity: 1; transform: none;"><header class="chakra-modal__header css-45mb3m" id="chakra-modal--header-89"><div class="css-1lekzkb">Select a Token</div><p class="chakra-text css-f06vj6">Search Name or Paste Token Contract Address</p><div class="chakra-input__group css-14nk9hv"><input placeholder="Search ..." class="chakra-input css-1qcc3u7" spellcheck="false" data-ms-editor="true"><div class="chakra-input__right-element css-19x6j0w"><img src="static/img/search.bf04c13d.svg" class="chakra-image css-0"></div></div></header>
+                        <button type="button" aria-label="Close" class="chakra-modal__close-btn css-111mb8s close"><svg viewBox="0 0 24 24" focusable="false" class="chakra-icon css-onkibi" aria-hidden="true"><path fill="currentColor" d="M.439,21.44a1.5,1.5,0,0,0,2.122,2.121L11.823,14.3a.25.25,0,0,1,.354,0l9.262,9.263a1.5,1.5,0,1,0,2.122-2.121L14.3,12.177a.25.25,0,0,1,0-.354l9.263-9.262A1.5,1.5,0,0,0,21.439.44L12.177,9.7a.25.25,0,0,1-.354,0L2.561.44A1.5,1.5,0,0,0,.439,2.561L9.7,11.823a.25.25,0,0,1,0,.354Z"></path></svg></button><div class="chakra-modal__body css-yl8lox" id="chakra-modal--body-89"><button type="button" class="chakra-button css-19owwni"><div class="css-1bntj9o"><div class="css-70qvj9"><div class="css-lvdg4k"><img src="https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c/logo.png" class="chakra-image css-0"></div><p class="chakra-text css-75cnih">BTCB</p></div><p class="chakra-text css-1yehhod">0.0</p></div></button><button type="button" class="chakra-button css-19owwni"><div class="css-1bntj9o"><div class="css-70qvj9"><div class="css-lvdg4k"><img src="https://assets-cdn.trustwallet.com/blockchains/smartchain/assets/0x2170Ed0880ac9A755fd29B2688956BD959F933F8/logo.png" class="chakra-image css-0"></div><p class="chakra-text css-75cnih">ETH</p></div><p class="chakra-text css-1yehhod">0.0</p></div></button><button type="button" class="chakra-button css-19owwni"><div class="css-1bntj9o"><div class="css-70qvj9"><div class="css-lvdg4k"><img src="/static/media/bsc-logo.358a42f2.png" class="chakra-image css-0"></div><p class="chakra-text css-75cnih">ELT</p></div><p class="chakra-text css-1yehhod">0.0</p></div></button><button type="button" class="chakra-button css-19owwni"><div class="css-1bntj9o"><div class="css-70qvj9"><div class="css-lvdg4k"><img src="/static/media/bsc-logo.358a42f2.png" class="chakra-image css-0"></div><p class="chakra-text css-75cnih">BSC-USD</p></div><p class="chakra-text css-1yehhod">0.0</p></div></button></div></section></div>
+                </div>
+                <!-- <div class="modal-footer">
+                    <h3>Modal Footer</h3>
+                </div> -->
+                </div>
+            
+            </div>
+
+
+            <script>
+                // Get the modal
+                var modal = document.getElementById("myModal");
+                
+                // Get the button that opens the modal
+                var btn = document.getElementById("myBtn");
+                
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+                
+                // When the user clicks the button, open the modal 
+                btn.onclick = function() {
+                  modal.style.display = "block";
+                }
+                
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function() {
+                  modal.style.display = "none";
+                }
+                
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                  if (event.target == modal) {
+                    modal.style.display = "none";
+                  }
+                }
+                </script>
     </body>
     <editor-card style="position: absolute; top: 0px; left: 0px; z-index: auto; display: block !important;">
         <div dir="ltr" style="all: initial;">
@@ -5788,5 +6212,4 @@
             </div>
         </div>
     </editor-card>
-    <grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
 </html>
